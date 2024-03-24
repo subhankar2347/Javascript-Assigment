@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>from validation</title>
+</head>
+<body bgcolor="skyblue">
+	<center>
+<form action="" onsubmit="return val()">
+	<h1>Username</h1>
+	<input type="text" id="t1" placeholder="username"><br>
+	<p id="y1"></p>
+	<h1>Password</h1>
+	<input type="password" id="t2" placeholder="enter the password"><br>
+	<p id="y2"></p>
+	<h1>Confrom Password</h1>
+	<input type="password" id="t3" placeholder="restore the password">
+	<p id="y3"></p>
+	<button id="t3" type="submit">submit</button>
+</form>
+<script type="text/javascript">
+	let un=document.getElementById("t1");
+	let pa=document.getElementById("t2");
+	let ps=document.getElementById("t3");
+	let t=1;
+	function val(){
+		if (un.value==""){
+			document.getElementById("y1").innerHTML="cannot be empty";
+			t=0;
+		}
+		else if(un.value.length<5){
+			document.getElementById("y1").innerHTML="too small";
+			t=0;
+		}
+		else{
+			document.getElementById("y1").innerHTML="";
+			t=1;
+		}
+		if (pa.value=="") {
+			document.getElementById("y1").innerHTML="this one is empty";
+			t=0;
+		}
+		else if (pa.value.length<8) {
+			document.getElementById("y2").innerHTML="";
+			t=1;
+		}
+		if (pa.value==ps.value) {
+			alert("password is not matching with the previous one")
+			t=0;
+		}
+		if (t) {
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+</script>
+</center>
+</body>
+</html>

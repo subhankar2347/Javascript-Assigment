@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculater</title>
+	<script type="text/javascript">
+		function pp(){
+			var a=parseInt(document.getElementById("tt").value);
+			var b=parseInt(document.getElementById("yy").value);
+			document.getElementById("result").innerHTML=a+b;
+		}
+		function mm(){
+			var a=parseInt(document.getElementById("tt").value);
+			var b=parseInt(document.getElementById("yy").value);
+			document.getElementById("result").innerHTML=a-b;
+		}
+		function rr(){
+			var a=parseInt(document.getElementById("tt").value);
+			var b=parseInt(document.getElementById("yy").value);
+			document.getElementById("result").innerHTML=a*b;	
+		}
+		function gg(){
+			var a=parseInt(document.getElementById("tt").value);
+			var b=parseInt(document.getElementById("yy").value);
+			document.getElementById("result").innerHTML=a/b;
+		}
+	</script>
+</head>
+<body>
+	1st number:
+	<input type="text" value="" id="tt">
+	2nd number:
+	<input type="text" value="" id="yy">
+	<input type="button" value="+" id="p" onclick="pp()">
+	<input type="button" value="-" id="u" onclick="mm()">
+	<input type="button" value="*" id="t" onclick="rr()">
+	<input type="button" value="/" id="m" onclick="gg()">
+
+	THE RESULT=
+	<span id="result"> </span>
+</body>
+</html>

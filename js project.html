@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+</head>
+<body>
+    <h1>Marksheet</h1>
+    <form>
+        <fieldset>
+            <legend><h1>Marksheet</h1></legend>
+            student name<input type="text" value="" id="name" placeholder="enter student name"><br><br>
+            student code<input type="text" value="" id="name" placeholder="enter student code"><br><br>
+            bengali<input type="number" value="" id="bn"><br><br>
+            english<input type="text" value="" id="en"><br><br>
+            mathamatics<input type="text" value="" id="mt"><br><br>
+            reasult: <input type="text" value="" id="rest" readonly><br><br>
+            grade: <input type="text" value="" id="grd" readonly><br><br>
+            <button type="button" onClick="result()">Reasult</button>
+        </fieldset>
+    </form>
+    <script>
+        function result(){
+            var a=parseInt(document.getElementById('bn').value);
+            var b=parseInt(document.getElementById('en').value);
+            var c=parseInt(document.getElementById('mt').value);
+            var res=parseInt(a+b+c);
+            document.getElementById('rest').value=res;
+            if(res>=80)
+            {
+                document.getElementById('grd').value="grade a";
+            }
+            else if(res>60 && res<=79)
+            {
+                document.getElementById('grd').value="grade b";
+            }
+            else if(res>40 && res<=59)
+            {
+                document.getElementById('grd').value="grade c";
+            }
+            else
+            {
+                document.getElementById('grd').value="grade f";
+            }
+        }
+    </script>
+</body>
+</html>

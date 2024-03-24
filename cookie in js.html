@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>seasone storage</title>
+</head>
+<body>
+<script type="text/javascript">
+	if(sessionstorage.hits){
+	  sessionstorage.hits= number(sessionstorage.hits)+1;
+	}else{
+		sessionstorage.hits=1;
+	}
+	document.write("total hits"+ sessionstorage.hits);
+</script>
+<p>refresh the window to increse the number of hits</p>
+</body>
+</html>
